@@ -1,5 +1,0 @@
-opencv-python
-streamlit
-imutils
-pytesseract
-numpy
