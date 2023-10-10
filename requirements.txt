@@ -1,6 +1,6 @@
-pip==23.2.1
-opencv-python
-streamlit
-imutils
-pytesseract
-numpy
+imutils==0.5.4
+numpy==1.25.2
+opencv_python==4.8.1.78
+opencv_python_headless==4.8.1.78
+pytesseract==0.3.10
+~pencv_python==4.8.1.78
