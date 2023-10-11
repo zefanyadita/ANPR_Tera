@@ -64,15 +64,12 @@ def main():
                     NumberPlateCnt=approx
                     x,y,w,h = cv2.boundingRect(c)
                     new_img = image[y:y+h,x:x+w]
-                    cv2.imwrite('Cropped image'+str(idx)+'.png',new_img)
-                    idx+=1
+                    img = Image.open(new_img)
                     break
 
             final = cv2.drawContours(image,[NumberPlateCnt],-1,(0,255,0),3)
             
-            Cropped_img_loc=Image.open(new_img)
-            crp = cv2.imread(Cropped_img_loc)
-            text = pytesseract.image_to_string(Cropped_img_loc,lang='eng')
+            text = pytesseract.image_to_string(img,lang='eng')
 
             st.image(image, caption='uploaded image')
             st.success(text)
