@@ -5,6 +5,8 @@ import pytesseract
 import numpy as np
 from pytesseract import image_to_string
 
+pytesseract.pytesseract.tesseract_cmd = 'tesseract.exe'
+
 def main():
     st.title("Automatic Number Plate Recognition Web-App")
     activities = ["About", "Detection"]
