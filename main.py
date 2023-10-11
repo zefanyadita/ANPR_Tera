@@ -3,7 +3,6 @@ import cv2
 import imutils
 import pytesseract
 import numpy as np
-from PIL import Image
 from pytesseract import image_to_string
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\\tesseract'
@@ -68,7 +67,6 @@ def main():
             final = cv2.drawContours(image,[NumberPlateCnt],-1,(0,255,0),3)
             
             Cropped_img_loc='Cropped image7.png'
-            crp = cv2.imread(Cropped_img_loc)
             text = pytesseract.image_to_string(Cropped_img_loc,lang='eng')
 
             st.image(image, caption='uploaded image')
