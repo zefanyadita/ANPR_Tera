@@ -54,6 +54,7 @@ def main():
             img2 = cv2.drawContours(img2,cnts,-1,(0,255,0),3) #5- Top 10 Contours
            
             count=0
+            idx=7
             for c in cnts:
                 peri=cv2.arcLength(c,True)
                 approx=cv2.approxPolyDP(c,0.02*peri,True)
