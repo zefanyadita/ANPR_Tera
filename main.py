@@ -65,7 +65,6 @@ def main():
                     x,y,w,h = cv2.boundingRect(c)
                     new_img = image[y:y+h,x:x+w]
                     img = Image.open(new_img)
-                    break
 
             final = cv2.drawContours(image,[NumberPlateCnt],-1,(0,255,0),3)
             
