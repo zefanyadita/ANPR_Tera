@@ -6,6 +6,8 @@ import numpy as np
 from PIL import Image
 from pytesseract import image_to_string
 
+pytesseract.pytesseract.tesseract_cmd=r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
 def main():
     st.title("Automatic Number Plate Recognition Web-App")
     activities = ["About", "Detection"]
@@ -63,7 +65,7 @@ def main():
                     break
 
             Im = Image.open('Cropped image.png')
-            text = pytesseract.image_to_string(Im)
+            text = pytesseract.image_to_string(Im,lang='eng')
 
             st.image(image, caption='uploaded image')
             st.success(text)
