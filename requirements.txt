@@ -2,5 +2,5 @@ pip==23.2.1
 imutils==0.5.4
 numpy==1.25.2
 opencv-python-headless==4.5.4.60
-tesseract--0.1.3
+pytesseract==0.3.10
 streamlit
