@@ -4,4 +4,4 @@ numpy==1.25.2
 opencv_python==4.8.1.78
 opencv_python_headless==4.8.1.78
 pytesseract==0.3.10
-streamlit
+streamlit==1.27.2
