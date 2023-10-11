@@ -65,7 +65,6 @@ def main():
                     break
 
             Im = Image.open('Cropped image.png')
-            crp = cv2.imread(Cropped_img_loc)
             text = pytesseract.image_to_string(Im,lang='eng')
 
             st.image(image, caption='uploaded image')
