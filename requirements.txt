@@ -3,4 +3,5 @@ imutils==0.5.4
 numpy==1.25.2
 opencv-python-headless==4.5.4.60
 pytesseract==0.3.10
+tesseract
 streamlit
