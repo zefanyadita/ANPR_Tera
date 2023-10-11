@@ -17,12 +17,10 @@ def main():
     if choice == "About":
         st.write(
     """
-    **Automatic Number Plate Recognition System is license plate identification system made using OpenCV and Tesseract OCR in python. For this project, It can be used to detect number plate from video as well as from image**.
+    **Automatic Number Plate Recognition System is license plate identification system made using OpenCV and Tesseract OCR in python. For this project, It can be used to detect number plate from image**.
     """
     )
 
-
-        
         st.markdown(
     """
     - [Source Code](https://github.com/zefanyadita/ANPR_Tera)
