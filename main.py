@@ -3,7 +3,6 @@ import cv2
 import imutils
 import pytesseract
 import numpy as np
-pytesseract.pytesseract.tesseract_cmd=r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 def main():
     st.title("Automatic Number Plate Recognition Web-App")
