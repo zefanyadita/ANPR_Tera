@@ -19,15 +19,14 @@ def main():
     """
     )
 
-    st.markdown(
+
+        
+        st.markdown(
     """
     - [Source Code](https://github.com/zefanyadita/ANPR_Tera)
     """
     )
 
-    st.caption("Created by **Zefanya Frandita**")
-
-    
     if choice == "Detection":
         with left_column:
             st.text(" ")
