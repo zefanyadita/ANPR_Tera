@@ -6,6 +6,7 @@ import numpy as np
 from PIL import Image
 from pytesseract import image_to_string
 
+pytesseract.pytesseract.tesseract_cmd = r"full path to the exe file"
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 def main():
@@ -64,7 +65,7 @@ def main():
                     cv2.imwrite('Cropped image.png',new_img)
 
             Im = Image.open('Cropped image.png')
-            text = pytesseract.image_to_string(Im,lang='eng')
+            text = pytesseract.image_to_string(Im,config='--psm 11')
 
             st.image(image, caption='uploaded image')
             st.success(text)
