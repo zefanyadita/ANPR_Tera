@@ -6,8 +6,7 @@ import numpy as np
 from PIL import Image
 from pytesseract import image_to_string
 
-pytesseract.pytesseract.tesseract_cmd = r"full path to the exe file"
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\User\AppData\Local\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd ='tesseract'
 
 def main():
     st.title("Automatic Number Plate Recognition Web-App")
