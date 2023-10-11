@@ -6,6 +6,10 @@ import numpy as np
 
 pytesseract.pytesseract.tesseract_cmd = 'tesseract'
 
+st.set_page_config(
+    page_title="ANPR_TERA",
+)
+
 def main():
     st.title("Automatic Number Plate Recognition Web-App")
     activities = ["About", "Detection"]
