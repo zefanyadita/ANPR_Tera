@@ -3,6 +3,7 @@ import cv2
 import imutils
 import pytesseract
 import numpy as np
+from PIL import Image
 from pytesseract import image_to_string
 
 pytesseract.pytesseract.tesseract_cmd = 'pytesseract'
@@ -53,7 +54,6 @@ def main():
             img2 = cv2.drawContours(img2,cnts,-1,(0,255,0),3) #5- Top 10 Contours
            
             count=0
-            idx=7
             for c in cnts:
                 peri=cv2.arcLength(c,True)
                 approx=cv2.approxPolyDP(c,0.02*peri,True)
@@ -61,15 +61,12 @@ def main():
                     NumberPlateCnt=approx
                     x,y,w,h = cv2.boundingRect(c)
                     new_img = image[y:y+h,x:x+w]
-                    cv2.imwrite('Cropped image'+str(idx)+'.png',new_img)
-                    idx+=1
+                    cv2.imwrite('Cropped image.png',new_img)
                     break
 
-            final = cv2.drawContours(image,[NumberPlateCnt],-1,(0,255,0),3)
-            
-            Cropped_img_loc='Cropped image7.png'
+            Im = Image.open('Cropped image.png')
             crp = cv2.imread(Cropped_img_loc)
-            text = pytesseract.image_to_string(Cropped_img_loc,lang='eng')
+            text = pytesseract.image_to_string(Im,lang='eng')
 
             st.image(image, caption='uploaded image')
             st.success(text)
