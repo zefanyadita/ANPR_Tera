@@ -57,18 +57,19 @@ def main():
            
             count=0
             idx=7
-            for c in cnts:
-                peri=cv2.arcLength(c,True)
-                approx=cv2.approxPolyDP(c,0.02*peri,True)
-                if len(approx)==4:
+            if len(approx)==4:
                     NumberPlateCnt=approx
                     x,y,w,h = cv2.boundingRect(c)
                     new_img = image[y:y+h,x:x+w]
-                    img = Image.open(new_img)
+                    cv2.imwrite('Cropped image'+str(idx)+'.png',new_img)
+                    idx+=1
+                    break
 
             final = cv2.drawContours(image,[NumberPlateCnt],-1,(0,255,0),3)
             
-            text = pytesseract.image_to_string(img,lang='eng')
+            Cropped_img_loc='Cropped image7.png'
+            crp = cv2.imread(Cropped_img_loc)
+            text = pytesseract.image_to_string(Cropped_img_loc,lang='eng')
 
             st.image(image, caption='uploaded image')
             st.success(text)
