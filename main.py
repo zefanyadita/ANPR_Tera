@@ -63,7 +63,7 @@ def main():
                     break
 
             Im = Image.open('Cropped image.png')
-            text = pytesseract.image_to_string(Im,lang='eng')
+            text = pytesseract.image_to_string(Im)
 
             st.image(image, caption='uploaded image')
             st.success(text)
