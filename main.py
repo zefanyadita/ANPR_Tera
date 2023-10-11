@@ -62,7 +62,6 @@ def main():
                     x,y,w,h = cv2.boundingRect(c)
                     new_img = image[y:y+h,x:x+w]
                     cv2.imwrite('Cropped image.png',new_img)
-                    break
 
             Im = Image.open('Cropped image.png')
             text = pytesseract.image_to_string(Im,lang='eng')
