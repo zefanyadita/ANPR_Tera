@@ -1,6 +1,7 @@
 pip==23.2.1
 imutils==0.5.4
 numpy==1.25.2
+opencv_contrib_python==4.8.1.78
 opencv_python==4.8.1.78
 opencv_python_headless==4.8.1.78
 pytesseract==0.3.10
