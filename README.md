@@ -22,6 +22,7 @@ various contexts, such as traffic monitoring, restricted area security, and park
 8. Output or Visualization:
     - The final step involves either visualizing the detected license plates on the original image or storing the coordinates of the detected plates for further processing.
 
+![My Image](1.jpeg)
 
 ## The Web-App -- https://anpr-tera-zefanyadita.streamlit.app/
 ![My Image](webapp.png)
